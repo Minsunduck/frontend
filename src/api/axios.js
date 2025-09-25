@@ -8,9 +8,9 @@ const api = axios.create({
 })
 
 
-//Flask API
+//Flask API (Flask 백엔드)
 const chatApi = axios.create({
-  baseURL: 'https://backend-movie-zrez.onrender.com',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:10000',
   headers: {
     'Content-Type': 'application/json'
   }

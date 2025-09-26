@@ -10,7 +10,7 @@ const api = axios.create({
 
 //Flask API (Flask 백엔드)
 const chatApi = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:10000',
+  baseURL: 'https://backend-maz4.onrender.com',
   headers: {
     'Content-Type': 'application/json'
   }

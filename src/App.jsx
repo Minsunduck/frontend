@@ -1,8 +1,6 @@
 import axios from 'axios';
 import api from "./api/axios";
 import { Route, Routes, Link } from "react-router";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from "react";
 
 import Section from "./components/Section";
@@ -59,9 +57,9 @@ export default function App() {
           <Route path="/" element={
             <>
               <VideoHero />
-              <Section title="현재 상영작" items={nowPlaying} />
-              <Section title="인기 상영작" items={popular} />
-              <Section title="상영 예정작" items={upComing} />
+              <Section title="현재 상영작" items={nowPlaying} m_v={2} p_v={6}/>
+              <Section title="인기 상영작" items={popular} m_v={2} p_v={6}/>
+              <Section title="상영 예정작" items={upComing} m_v={2} p_v={6}/>
             </>
           } />
           <Route path='/movie/:id' element={<MovieDetail />} />
@@ -77,8 +75,9 @@ function Header() {
     <header className="fixed top-0 left-0 w-full py-4 px-2 bg-black/90 z-50">
       <div className="container mx-auto">
         <Link to="/">
-          <h1 className="text-3xl text-yellow-300 font-bold">
-            <FontAwesomeIcon icon={faHouse} />GOFLIX</h1>
+          <h1 className="text-3xl text-yellow-300 font-bold flex items-center gap-2">
+            <img src="/logo.png" alt="GOFLIX Logo" className="w-50" />
+          </h1>
         </Link>
       </div>
     </header>
@@ -93,7 +92,7 @@ function VideoHero() {
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 flex-col flex items-center justify-center h-full">
         <h2 className="text-5xl md:text-7xl font-bold mb-6 text-yellow-300">
-          GOFLEX
+          POPCORN PLAY
         </h2>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl">
           최신 영화와 인기 작품을 만나보세요.

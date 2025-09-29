@@ -35,6 +35,12 @@ export default function MovieDetail() {
                 <p>{movie.release_date}</p>
               </div>
               <div>
+                <h3 className="text-yellow-500">genres</h3>
+              <p>{movie.genres.map((el)=>(
+                <span key={el.id}>{el.name}</span>
+              ))}</p>
+              </div>
+              <div>
                 <h3 className="text-yellow-500">Rating</h3>
                 <p>{movie.vote_average}</p>
               </div>

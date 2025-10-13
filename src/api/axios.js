@@ -11,7 +11,7 @@ const api = axios.create({
 
 //챗봇 API(Flask 백엔드)
 const chatApi = axios.create({
-  baseURL: 'https://backend-1w2e.onrender.com',
+  baseURL: 'https://chatbot-nhm6.onrender.com',
   //baseURL: 'http://localhost:8000',
   headers: { 
     'Content-Type': 'application/json' } 
